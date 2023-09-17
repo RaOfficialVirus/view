@@ -1,7 +1,7 @@
 import shutil
 import os
 import time
-view_dir_1 = "/sdcard/hubk"
+view_dir_1 = "/sdcard/hubk/view/view.py"
 if os.path.exists(view_dir_1):
     shutil.rmtree(view_dir_1)
     print("\033[32mHi...")
