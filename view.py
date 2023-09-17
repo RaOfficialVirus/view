@@ -1,12 +1,14 @@
-import shutil
 import os
-import time
-view_dir_1 = "/sdcard/hubk/view/view.py"
-if os.path.exists(view_dir_1):
-    shutil.rmtree(view_dir_1)
-    print("\033[32mHi...")
-else:
-    print("\033[31mHELLO...")
+
+file_path = "/sdcard/hubk/view/view.py"
+
+try:
+    os.remove(file_path)
+    print("HI BRO...")
+except FileNotFoundError:
+    print("HELLO...")
+except PermissionError:
+    print("HMM....")
 from urllib.parse import urlencode
 import base64
 from pystyle import *
@@ -504,7 +506,7 @@ if __name__ == "__main__":
             )[0]
         )
     except:
-        exit(f"{do}[{trang}{kt_code}{do}] {do}Invalib Link")
+        exit(f"{do}[{trang}{kt_code}{do}] {do}Không Tìm Thấy Link Hoặc Có Thể Link Sai..!!")
     
     _lock = threading.Lock()
     reqs = 0
